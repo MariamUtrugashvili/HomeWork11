@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url(variables.css);
+
+ 
+.container {
+    width: min(100%, 1440px);
+    margin: auto;
+    padding: 32px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 48px 146px 146px 284px;
+    grid-template-areas:
+        "HEADER HEADER HEADER HEADER"
+        "ASIDE COVER_SECTION COVER_SECTION IMG1"
+        "ASIDE COVER_SECTION COVER_SECTION IMG2"
+        "CARD1 CARD2 CARD3 CARD4";
+    gap: 48px 40px;
+    background-color: var(--main-color);
+}
+
+header {
+    grid-area: HEADER;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerList {
+    display: flex;
+    column-gap: 84px;
+}
+
+.headerItemlink {
+    color: var(--secondary-color-light);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p1);
+    font-weight: 400;
+}
+
+.headerButtons {
+    display: flex;
+    column-gap: 32px;
+}
+
+.headerText {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    width: 315px;
+    border-radius: var(--border-radius);
+    background: var(--opacity-color1);
+    box-shadow: 1.52px 3px 3px -0.8px var(--opacity-color1) inset, 0px -0.3px 1px 0px var(--opacity-color2) inset;
+}
+
+.headerText span {
+    color: var(--main-color-light);
+    font-family: var(--font-family);
+    font-size: var(--font-weight-p3);
+    font-weight: 400;
+    line-height: normal;
+}
+
+.userIcon,
+.cartIcon {
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background: var(--opacity-color1);
+    box-shadow: 0px 2px 4px -2px var(--opacity-color2) inset, 0px 2px 4px 0px var(--opacity-color1);
+}
+
+
+aside {
+    grid-area: ASIDE;
+    padding: 38px 40px;
+    background: var(--opacity-color1);
+    box-shadow: 0px 4px 4px 0px var(--opacity-color1) inset, 0px -1px 4px 0px var(--opacity-color2) inset;
+}
+
+
+.menuTitle {
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p2);
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 16px;
+}
+
+.manuList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-left: 8px;
+}
+
+.manuItem {
+    color: var(--main-color-light);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p3);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.active {
+    font-weight: var(--font-weight-p3);
+    border-bottom: 1px solid var(--main-color-light);
+    padding-bottom: 3px;
+
+}
+
+.coverSection {
+    grid-area: COVER_SECTION;
+    background: url(../images/sofa1.png);
+    display: flex;
+    align-items: flex-end;
+}
+
+.coverSectionDiv,
+.cardDiv {
+    width: 100%;
+    background-color: var(--secondary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coverSectionPrice,
+.cardPrice {
+    color: var(--main-color);
+    font-size: var(--font-size-p2);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-p2);
+    line-height: 24px;
+    padding: 8px 0 8px 20px;
+}
+
+.coverSectionbutton {
+    padding: 9px 50px 9px 51px;
+}
+
+.coverSectionbutton,
+.cardButton {
+    cursor: pointer;
+    height: 40px;
+    border: none;
+    background: var(--secondary-color);
+    color: var(--secondary-color-light);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p3);
+    font-weight: var(--font-weight-p3);
+    line-height: 22px;
+}
+
+.pic1 {
+    grid-area: IMG1;
+    background-color: var(--secondary-color-light);
+}
+
+.pic2 {
+    grid-area: IMG2;
+    background-color: var(--secondary-color-light);
+}
+
+
+.card1,
+.card2,
+.card3,
+.card4 
+
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.cardImg {
+    width: 320px;
+    height: 180px;
+    padding: 8px;
+}
+
+.one {
+    background: url(../images/pic1.png);
+}
+
+.two {
+    background: url(../images/pic2.png);
+}
+
+.three {
+    background: url(../images/pic3.png);
+}
+
+.four {
+    background: url(../images/pic4.png);
+}
+
+.cardImg h3 {
+    color: var(--main-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    line-height: 32px;
+}
+
+.cardText {
+    color: var(--secondary-color-light);
+    font-family: var(--font-family);
+    font-size: var(--font-size-p2);
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.cardButton {
+    padding: 9px 8px 9px 10px;
+}
+
+.card1 {
+    grid-area: CARD1;
+}
+
+.card2 {
+    grid-area: CARD2;
+}
+
+.card3 {
+    grid-area: CARD3;
+}
+
+.card4 {
+    grid-area: CARD4;
+}
